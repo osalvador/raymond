@@ -511,7 +511,7 @@ func lexString(l *Lexer) lexFunc {
 
 	for {
 		r := l.next()
-		if r == eof || r == '\n' {
+		if r == eof {
 			return l.errorf("Unterminated string")
 		}
 
